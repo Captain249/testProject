@@ -13,7 +13,7 @@ public class WebServiceClient {
             call.setEncodingStyle("UTF-8");
             call.setTargetEndpointAddress(endpoint);
             //call.setOperationName("sayHelloWorldFrom");//WSDL里面描述的接口名称
-            call.setOperationName(new javax.xml.namespace.QName("HelloWorldWS", "sayHelloWorldFrom"));
+            call.setOperationName(new javax.xml.namespace.QName("HelloWorldWS", "testResult"));
             call.addParameter("from", org.apache.axis.encoding.XMLType.XSD_STRING, javax.xml.rpc.ParameterMode.IN);//接口的参数
             //call.addParameter("from", XMLType.XSD_STRING, ParameterMode.IN);
             call.setReturnType(org.apache.axis.encoding.XMLType.XSD_STRING);//设置返回类型
