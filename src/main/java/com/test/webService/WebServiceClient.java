@@ -5,20 +5,16 @@ import org.apache.axis.client.Service;
 public class WebServiceClient {
     public static void main(String[] args) {
         try {
-            String endpoint = "http://localhost:9000/HelloWorld?wsdl";
-            //直接引用远程的wsdl文件
-            //以下都是套路
+            String endpoint = "http://localhost:8080/services/MyService?wsdl";
             Service service = new Service();
             Call call = (Call) service.createCall();
             call.setEncodingStyle("UTF-8");
             call.setTargetEndpointAddress(endpoint);
-            //call.setOperationName("sayHelloWorldFrom");//WSDL里面描述的接口名称
-            call.setOperationName(new javax.xml.namespace.QName("HelloWorldWS", "testResult"));
+            call.setOperationName(new javax.xml.namespace.QName("http://myService", "test"));
             call.addParameter("from", org.apache.axis.encoding.XMLType.XSD_STRING, javax.xml.rpc.ParameterMode.IN);//接口的参数
-            //call.addParameter("from", XMLType.XSD_STRING, ParameterMode.IN);
             call.setReturnType(org.apache.axis.encoding.XMLType.XSD_STRING);//设置返回类型
-            String temp = "测试人员";
-            String result = (String) call.invoke(new Object[]{temp});//给方法传递参数，并且调用方法
+            String from = "孙志涛";
+            String result = (String) call.invoke(new Object[]{from});//给方法传递参数，并且调用方法
             System.out.println("result is " + result);
         } catch (Exception e) {
             System.err.println(e.toString());
