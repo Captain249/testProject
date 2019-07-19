@@ -1,4 +1,4 @@
-package com.test.javaBasis.threadDemos;
+package com.test.javaBasis.threadDemos.FutureDemo;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -26,7 +26,6 @@ public class FutureDemo {
         };
         FutureTask<String> ft1 = new FutureTask<String>(ca1);
         new Thread(ft1).start();
-
         Callable ca2 = new Callable(){
             @Override
             public Object call() throws Exception {
@@ -40,7 +39,6 @@ public class FutureDemo {
         };
         FutureTask<String> ft2 = new FutureTask<String>(ca2);
         new Thread(ft2).start();
-
         System.out.println(ft1.get());
         System.out.println(ft2.get());
         long end = System.currentTimeMillis();

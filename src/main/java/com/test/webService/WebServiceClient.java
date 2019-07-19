@@ -1,7 +1,6 @@
 package com.test.webService;
 import org.apache.axis.client.Call;
 import org.apache.axis.client.Service;
-
 public class WebServiceClient {
     public static void main(String[] args) {
         try {
