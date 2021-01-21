@@ -22,7 +22,7 @@
     <spring.data.jpa.version>1.9.2.RELEASE</spring.data.jpa.version>
     <jackson-annotations.version>2.4.1</jackson-annotations.version>
     <jackson-core.version>2.4.1</jackson-core.version>
-    <jackson-databind.version>2.4.1</jackson-databind.version>
+    <jackson-databind.version>2.9.10.7</jackson-databind.version>
     <mongo-java-driver.version>3.2.2</mongo-java-driver.version>
     <bson4jackson.version>2.4.0</bson4jackson.version>
     <jongo.version>1.2</jongo.version>
